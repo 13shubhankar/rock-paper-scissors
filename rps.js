@@ -19,9 +19,7 @@ function resetHighlights() {
 }
 
 const playgame = (userchoice) => {
-    console.log("User choice is", userchoice);
     const compchoice = getcompchoice();
-    console.log("Computer choice is", compchoice);
 
     const userDiv = document.getElementById(userchoice);
     const compDiv = document.getElementById(compchoice);
@@ -61,8 +59,12 @@ const playgame = (userchoice) => {
 
 // Event listeners for choices
 choices.forEach((choice) => {
-    choice.addEventListener('click', () => {
-        const userchoice = choice.getAttribute("id");
+    const userchoice = choice.getAttribute("id");
+
+    // Support both click and touch events
+    choice.addEventListener('click', () => playgame(userchoice));
+    choice.addEventListener('touchstart', (e) => {
+        e.preventDefault(); // prevent double triggers
         playgame(userchoice);
-    });
+    }, { passive: false });
 });

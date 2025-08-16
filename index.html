@@ -3,41 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-Paper-Scissors-game</title>
+    <title>Rock-Paper-Scissors Game</title>
     <link rel="stylesheet" href="rps.css">
 </head>
 <body>
     <h1>Rock-Paper-Scissors</h1>
 
+    <!-- Choices -->
     <div class="choices">
-    <div class="choice" id="rock">
-       
-    <source>
-        <img src="rock.png" alt="Rock">
+        <div class="choice" id="rock">
+            <img src="rock.png" alt="Rock">
+        </div>
+        <div class="choice" id="paper">
+            <img src="paper.png" alt="Paper">
+        </div>
+        <div class="choice" id="scissors">
+            <img src="scissors.png" alt="Scissors">
+        </div>
     </div>
-     <div class="choice" id="paper">
-    <source>
-        <img src="paper.png" alt="Paper">
-    </div>
-     <div class="choice" id="scissors">
-    <source>
-        <img src="scissors.png" alt="Scissors">
-    </div>
-    </div>
-<div class="score_board">
-   <div class="computer_score"> <p>comp</p>
-    <p id="computer"> 0</p>
-    </div>
-    <div class="user_score">
-    <p>you</p>
-    <p id="user"> 0</p>
-    </div>
-</div>
-</div>
-<div class="msg_container">
-    <p id="msg">Choose your weapon!</p>
 
-</div>
-<script src="rps.js"></script>
+    <!-- Scoreboard -->
+    <div class="score_board">
+        <div class="computer_score">
+            <p>Computer</p>
+            <p id="computer">0</p>
+        </div>
+        <div class="user_score">
+            <p>You</p>
+            <p id="user">0</p>
+        </div>
+    </div>
+
+    <!-- Message -->
+    <div class="msg_container">
+        <p id="msg">Choose your weapon!</p>
+    </div>
+
+    <script src="rps.js"></script>
 </body>
 </html>
